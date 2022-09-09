@@ -1,14 +1,3 @@
 <h1>{{title}}</h1>
-<!-- <div [ngSwitch]="color">
-    <h1 *ngSwitchCase="'red'" style="color: red;">red color</h1>
-    <h1 *ngSwitchCase="'green'" style="color: green;">green color</h1>
-    <h1 *ngSwitchCase="'blue'" style="color: blue;">blue color</h1>
-    <h1 *ngSwitchCase="'purple'" style="color: purple;">purple color</h1>
-    <h1 *ngSwitchCase="'yellow'" style="color: yellow;">yellow color</h1>
-    <h1 *ngSwitchCase="'aqua'" style="color: aqua;">aqua color</h1>
-</div> -->
-
-<h1 [style.color]="colors[color]">{{colors[color]}} color</h1>
-<br>
-<br>
-<button (click)="increase()">change color</button>
+<h3 *ngFor="let item of user">{{item}}</h3>
+<h3 *ngFor="let item of userdetail">{{item.name}} --- {{item.email}}</h3>
