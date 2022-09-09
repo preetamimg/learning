@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'for loop';
-  user = ['Ajay', 'Deepak' , 'Suresh']
-  userdetail = [
-    {name:'Ajay' , email:'Ajay@email.com'},
-    {name:'Deepak' , email:'Deepak@email.com'},
-    {name:'Suresh' , email:'Suresh@email.com'}
+  title = 'nested for loop';
+  users = [
+    {name:'Ajay' , email:'Ajay@email.com', SocialAccount: ['facebook', 'google', 'yahoo']},
+    {name:'Deepak' , email:'Deepak@email.com', SocialAccount: ['facebook1', 'google1', 'yahoo1']},
+    {name:'Suresh' , email:'Suresh@email.com', SocialAccount: ['facebook2', 'google2', 'yahoo2']}
   ]
 }
