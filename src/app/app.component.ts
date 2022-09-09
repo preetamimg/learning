@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learning';
+  title = 'switch case';
+  colors = ['red' ,'green', 'blue', 'purple', 'yellow', 'aqua']
+  color = 0;
+  increase(){
+    this.color = this.color >= this.colors.length - 1 ? 0 : this.color + 1
+    console.log(this.color)
+  }
 }
