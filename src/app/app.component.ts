@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learning';
+  title = 'Send data from child to parent';
+  data:string=''
+  updateData(item:string){
+    console.warn(item)
+    this.data= item
+  }
 }
