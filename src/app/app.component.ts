@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learning';
+  title = 'Reusable Component';
+  userDetails = [
+    {name: 'preetam', email:'preetam@test.com'},
+    {name: 'deepak', email:'deepak@test.com'},
+    {name: 'ajay', email:'ajay@test.com'},
+    {name: 'suresh', email:'suresh@test.com'},
+  ]
 }
