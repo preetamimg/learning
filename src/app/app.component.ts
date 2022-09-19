@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learning';
+  title = 'Template Referance';
+  item:string = ''
+  getval(val:string){
+    console.log(val)
+    this.item = val
+  }
 }
