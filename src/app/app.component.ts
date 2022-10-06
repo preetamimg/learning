@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms'
+import {FormControl, FormGroup, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,16 @@ import {FormControl, FormGroup} from '@angular/forms'
 export class AppComponent {
   title = 'Reactive Form';
   loginForm = new FormGroup({
-    user: new FormControl(''),
-    password: new FormControl(''),
+    user: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   })
-  val:any = '';
   getdata() {
     console.log(this.loginForm.value)
-    this.val = this.loginForm.value
+  }
+  get user() {
+    return this.loginForm.get('user')
+  }
+  get pass() {
+    return this.loginForm.get('password')
   }
 }
-

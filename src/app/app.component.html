@@ -4,13 +4,15 @@
 <form [formGroup]="loginForm" (ngSubmit)="getdata()">
 
   <input type="text" placeholder="entre name" formControlName="user">
-  <br><br>
+  <br>
+  <span *ngIf="user && user.invalid && user.touched">This is not a valid field</span>
+  <br>
   <input type="text" placeholder="entre password" formControlName="password">
-  <br><br>
-  <button>Submit</button>
+  <br>
+  <span *ngIf="pass && pass.invalid && pass.touched">This is not a valid field</span>
+  <br>
+  <button [disabled]="loginForm.invalid">Submit</button>
 </form>
 <br>
 <br>
-<p>{{val.user}}</p>
-<p>{{val.password}}</p>
 
