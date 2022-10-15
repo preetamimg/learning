@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learning';
+  title = 'Test API';
+  users: any;
+  constructor (private user:UserService) {
+      this.user.getUser().subscribe((data) =>{
+        console.warn(data);
+      })
+  }
+  getUserForm(val:any) {
+    this.user.saveUser(val).subscribe((data) =>{})
+  }
 }
